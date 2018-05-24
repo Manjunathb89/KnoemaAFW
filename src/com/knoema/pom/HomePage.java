@@ -1,0 +1,40 @@
+package com.knoema.pom;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage
+{
+	@FindBy(id="username")
+	private WebElement usernameDropdownMenu;
+
+	@FindBy(id="logout")
+	private WebElement LogoutLink;
+	
+	@FindBy(id="admin")
+	private WebElement AdminMenu;
+	
+	public HomePage(WebDriver driver)
+	{
+	PageFactory.initElements(driver,this);	
+	}
+	
+	public WebElement ClickUserName()
+	{
+		usernameDropdownMenu.click();
+		return AdminMenu;
+	}
+	
+	public void clickAdmin()
+	{
+		AdminMenu.click();
+	}
+	
+	public void clickLogoutLink()
+	{
+		LogoutLink.click();
+	}
+}
