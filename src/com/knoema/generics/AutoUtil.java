@@ -1,4 +1,4 @@
-/*dggd*/
+
 package com.knoema.generics;
 
 import java.io.File;
